@@ -77,11 +77,4 @@ uv run marimo check notebooks/continual_studio.py
 uv run marimo export html notebooks/continual_studio.py -o /tmp/cadforge-studio.html
 ```
 
-The supplied CAD Sandboxes code also provides local STL inspection:
-
-```sh
-npm ci --prefix cad-sandboxes-main/click-to-ship
-uv run python cad-sandboxes-main/cad-preview/preview.py PATH_TO_DESIGN.stl --no-open
-```
-
 Generated designs, local traces and private evaluation artifacts are ignored by git. No manufacturing purchase, fabrication acceptance or production release is implied by an exported model.

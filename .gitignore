@@ -15,3 +15,4 @@ node_modules/
 studio/dist/
 .DS_Store
 .vite/
+cad-sandboxes-main/
