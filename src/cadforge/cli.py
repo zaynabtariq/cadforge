@@ -23,12 +23,12 @@ def main():
         from .schema import DesignSpec
         from .planner import parse_request,plan_with_model
         from .pipeline import run_design
-        from .telemetry import enable_weave,trace_development
+        from .telemetry import enable_weave,load_env,trace_development
         model_usage=None
         if args.spec:
             spec=DesignSpec.model_validate_json(args.spec.read_text())
         elif args.llm:
-            enable_weave()
+            load_env(); enable_weave()
             spec,model_usage=trace_development(plan_with_model)(args.request)
         else:
             spec=parse_request(args.request)

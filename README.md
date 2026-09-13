@@ -47,7 +47,7 @@ The measured initial continual discovery used **170 CAD trials**. A subsequent t
 
 ## Cooperating tools and tracing
 
-[Live development traces](https://wandb.ai/zzaynabb-03-radpilot/cadforge-continual/weave) record measured operations in the configured project. Enable tracing explicitly and supply credentials through the environment; never put keys in CAD files or notebook output. Inference and observability are distinct capabilities, and successful tracing alone does not establish model-provider availability.
+[Live development traces](https://wandb.ai/zzaynabb-03-radpilot/cadforge-continual/weave) record measured operations in the configured project. Tracing covers both the executed CAD trials and the learning decisions they justify: `run_experiment`, `propose_affine_command`, `challenge_candidate`, `promote_command`, `reuse_promoted_command` and `select_latest_command`. Credentials load from a local gitignored `.env` at explicit opt-in entry points only; `enable_weave` still reports disabled when the calling environment carries no credential. Enable tracing explicitly and supply credentials through the environment; never put keys in CAD files or notebook output. Inference and observability are distinct capabilities, and successful tracing alone does not establish model-provider availability.
 
 An MCP server exposes development fit measurement, learning/reuse and glasses generation tools:
 

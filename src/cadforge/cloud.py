@@ -9,6 +9,8 @@ import sys
 SETTINGS=Path.home()/'.config'/'cadforge'/'settings.json'
 
 def credential():
+    from .telemetry import load_env
+    load_env()
     if os.getenv('WANDB_API_KEY'):
         return os.environ['WANDB_API_KEY']
     if sys.platform=='darwin':
@@ -19,6 +21,8 @@ def credential():
 
 def init_development(project=None):
     """Explicit development entry point. Never called by archived heldout evaluator."""
+    from .telemetry import load_env
+    load_env()
     if project is None and SETTINGS.exists():
         project=json.loads(SETTINGS.read_text()).get('weave_project')
     project=project or os.getenv('CADFORGE_WEAVE_PROJECT')

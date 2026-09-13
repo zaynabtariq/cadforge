@@ -7,6 +7,23 @@ from datetime import datetime, timezone
 from threading import Lock
 
 _lock = Lock()
+_env_loaded = False
+
+def load_env():
+    """Load repository .env once, from explicit tracing entry points only.
+
+    Never call this from enable_weave/trace_development: those must report
+    disabled whenever the caller's environment carries no credential.
+    """
+    global _env_loaded
+    if _env_loaded:
+        return
+    _env_loaded = True
+    try:
+        from dotenv import load_dotenv
+    except ImportError:
+        return
+    load_dotenv(Path(__file__).resolve().parents[2] / '.env', override=False)
 
 def record(path: Path, event: str, **payload):
     path.parent.mkdir(parents=True, exist_ok=True)
