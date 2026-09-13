@@ -1,0 +1,12 @@
+{
+  "development_sha256": "8b588ececf838f6fc7cec2f9d102311a9e905f7633d2c4f7a36237a0cdd2c624",
+  "frozen_at_unix": 1789252702.221673,
+  "hidden_count": 100,
+  "hidden_sha256": "8647cb2f225ccb05b7c10f6fefb7edab9b5357f5213f88bd79018c2731b59467",
+  "protocol_sha256": "051a719d4bca5c1faf74067e0ca3a553e2043c4eab5c49c05a9d85bfd4f79fd1",
+  "source_sha256": {
+    "src/cadforge/benchmark.py": "c1732e8324aab768f9000191d611748d23fc68a6527d6e38dc11c88de9b169c5",
+    "src/cadforge/benchmark_reference.py": "c0c6643ad2f736050dd14d46deabe9dc839ae8b242c7bbf3a52bb8f4977d42bb",
+    "src/cadforge/schema.py": "20bad82293be268c12922f30cb13c859e5bc1bde1b7089fdbbef0bdf0e07086c"
+  }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAD Preview</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#10171e;color:#dfe9ec;font:13px system-ui}#view{position:fixed;inset:0}canvas{display:block;touch-action:none}header,footer{position:fixed;left:18px;right:18px;display:flex;align-items:center;gap:12px;pointer-events:none}header{top:18px;justify-content:space-between}footer{bottom:16px;flex-wrap:wrap;color:#9eb2be}strong{font-size:15px;font-weight:550}button{pointer-events:auto;background:#1d303b;color:#dfe9ec;border:1px solid #3c5360;border-radius:7px;padding:8px 12px;cursor:pointer}.pill{background:#16232ce8;border:1px solid #30424e;border-radius:9px;padding:10px 12px}#status{color:#77d8ba}#error{color:#f2bd87;max-width:75vw}nav{display:flex;gap:6px}@media(max-width:450px){header{align-items:flex-start;flex-direction:column}footer{font-size:11px}}
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<div id="view"></div><header><div class="pill"><strong id="name">CAD Preview</strong><div id="status">Loading model…</div></div><nav><button id="fit">Fit</button><button id="wire">Wireframe</button></nav></header>
+<footer><span class="pill" id="details">STL coordinates · millimeters assumed</span><span>Drag to orbit · scroll to zoom · right-drag to pan</span><span id="error"></span></footer>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from './vendor/OrbitControls.js';
+import {STLLoader} from './vendor/STLLoader.js';
+const $=id=>document.getElementById(id);
+const scene=new THREE.Scene();scene.background=new THREE.Color('#10171e');
+const camera=new THREE.PerspectiveCamera(38,1,.01,10000);camera.up.set(0,0,1);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));$('view').append(renderer.domElement);
+renderer.domElement.setAttribute('aria-label','Interactive STL model');
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;
+scene.add(new THREE.HemisphereLight(0xc9e6ff,0x39424c,2.5));
+const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(150,-100,220);scene.add(light);
+const material=new THREE.MeshStandardMaterial({color:0x77b7b1,metalness:.2,roughness:.42,side:THREE.DoubleSide});
+const loader=new STLLoader();let mesh,revision='',updates=0;
+function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()}
+addEventListener('resize',resize);resize();
+renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera)});
+function fit(){if(!mesh)return;const box=mesh.geometry.boundingBox,center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()).length();controls.target.copy(center);camera.position.copy(center).add(new THREE.Vector3(size,-size,size*.7).multiplyScalar(Math.max(1,1/camera.aspect)));camera.near=size/1000;camera.far=size*100;camera.updateProjectionMatrix();controls.update()}
+$('fit').onclick=fit;$('wire').onclick=()=>{material.wireframe=!material.wireframe;$('wire').setAttribute('aria-pressed',String(material.wireframe))};
+window.cadPreview={state:()=>({revision,updates,camera:camera.position.toArray(),target:controls.target.toArray(),triangles:mesh?.geometry.attributes.position.count/3}),fit};
+async function poll(){try{
+ const response=await fetch('./state');if(!response.ok)throw Error('Preview server unavailable');const state=await response.json();$('name').textContent=state.name;$('error').textContent=state.error;
+ if(state.revision&&state.revision!==revision){
+  const response=await fetch('./model?revision='+state.revision);if(response.status===409)return;if(!response.ok)throw Error('Model download failed');const raw=await response.arrayBuffer();
+  const geometry=loader.parse(raw);const pos=geometry.attributes.position;
+  if(!pos||pos.count<3||pos.count%3||!pos.array.every(Number.isFinite)){geometry.dispose();throw Error('Invalid geometry; keeping previous model')}
+  geometry.computeBoundingBox();const size=geometry.boundingBox.getSize(new THREE.Vector3());if(!size.length()){geometry.dispose();throw Error('Empty geometry; keeping previous model')}
+  const first=!mesh;if(mesh){scene.remove(mesh);mesh.geometry.dispose()}mesh=new THREE.Mesh(geometry,material);scene.add(mesh);if(first)fit();revision=state.revision;updates++;
+  $('details').textContent=`${(pos.count/3).toLocaleString()} triangles · ${[size.x,size.y,size.z].map(n=>n.toFixed(1)).join(' × ')} mm (assumed)`;
+  $('status').textContent=`Watching · update ${updates} · ${new Date().toLocaleTimeString()}`;
+ }
+ }catch(e){$('error').textContent=e.message}finally{setTimeout(poll,500)}}
+poll();
+</script></html>

@@ -1,0 +1,29 @@
+import {chromium} from '../studio/node_modules/playwright/index.mjs';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const root=process.cwd(),out=path.join(root,'artifacts/studio-wheel');
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1600,height:1000},acceptDownloads:true});
+const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+let record={};
+try{
+ const response=await page.goto('http://127.0.0.1:2742',{waitUntil:'networkidle'});
+ if(response.status()!==200)throw Error('Bundled page failed');
+ await page.locator('#file-input').setInputFiles(path.join(root,'artifacts/region-public/plate_holes.STL'));
+ await page.waitForFunction(()=>document.getElementById('document-name').textContent==='plate_holes.STL');
+ await page.locator('#busy').waitFor({state:'hidden'});
+ await page.locator('.object-row').first().click();
+ await page.locator('#prompt').fill('Move this 5 mm to the right');
+ const event=page.waitForResponse(r=>r.url().endsWith('/edit'));
+ await page.locator('#send').click();const result=await (await event).json();
+ if(!result.preview?.accepted)throw Error('Edit rejected '+JSON.stringify(result));
+ await page.locator('#busy').waitFor({state:'hidden'});
+ await page.screenshot({path:path.join(out,'bundled-preview.png')});
+ await page.locator('#apply').click();await page.locator('#busy').waitFor({state:'hidden'});
+ const download=page.waitForEvent('download');await page.locator('#export').click();await (await download).saveAs(path.join(out,'edited.stl'));
+ const missing=await page.request.get('http://127.0.0.1:2742/api/not-a-route');
+ if(missing.status()!==404)throw Error('Unknown API route was masked');
+ record={result,errors,unknown_api_status:missing.status(),scripts:await page.locator('script[src]').evaluateAll(nodes=>nodes.map(n=>n.src))};
+ if(errors.length)throw Error('Browser errors');
+}finally{await fs.writeFile(path.join(out,'browser-result.json'),JSON.stringify(record,null,2));await browser.close();}
+console.log(JSON.stringify({accepted:record.result.preview.accepted,planner:record.result.planner,usage:record.result.usage,errors}));

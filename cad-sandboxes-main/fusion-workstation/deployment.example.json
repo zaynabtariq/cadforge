@@ -1,0 +1,7 @@
+{
+  "region": "us-west-2",
+  "name": "fusion-workstation",
+  "vpc_id": "",
+  "subnet_id": "",
+  "instance_type": "m6i.xlarge"
+}

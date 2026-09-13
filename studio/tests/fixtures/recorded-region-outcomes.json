@@ -1,0 +1,336 @@
+[
+  {
+    "command": {
+      "op": "translate",
+      "axis": "x",
+      "amount_mm": 12
+    },
+    "explanation": "The selected object will be moved 12 mm to the right along the x-axis as requested.",
+    "preview": {
+      "accepted": true,
+      "command": {
+        "op": "translate",
+        "axis": "x",
+        "amount_mm": 12
+      },
+      "selection": {
+        "part_id": "5e9381da1eb4488bb74e5dbf420433e8",
+        "region": {
+          "min": [
+            -0.0001,
+            -0.0001,
+            3.174899952316284
+          ],
+          "max": [
+            203.2000969482422,
+            304.80011831054685,
+            12.700099809265136
+          ]
+        },
+        "point": [
+          101.5999984741211,
+          152.40000915527344,
+          7.9374998807907104
+        ]
+      },
+      "repair_trials": [
+        {
+          "strategy": "sharp",
+          "accepted": false,
+          "checks": [
+            {
+              "name": "outside_vertices_exact",
+              "passed": true,
+              "detail": "All vertices outside selected AABB remain bitwise unchanged."
+            },
+            {
+              "name": "triangle_indices_preserved",
+              "passed": true,
+              "detail": "Original triangle indices and vertex count retained."
+            },
+            {
+              "name": "finite_vertices",
+              "passed": true,
+              "detail": "No NaN/infinite coordinates."
+            },
+            {
+              "name": "watertight_positive_volume",
+              "passed": true,
+              "detail": "Closed consistently oriented mesh with positive signed volume."
+            },
+            {
+              "name": "no_collapsed_faces",
+              "passed": true,
+              "detail": "All triangle doubled areas exceed numerical floor."
+            },
+            {
+              "name": "no_flipped_faces",
+              "passed": false,
+              "detail": "Every normal retains positive dot product with its original normal; conservative under large rotations."
+            },
+            {
+              "name": "requested_peak_translation",
+              "passed": true,
+              "detail": "Requested interior peak 12.0 mm; measured magnitude 12.0 mm. Transition strategy may move other selected vertices less."
+            }
+          ]
+        },
+        {
+          "strategy": "interior_transition_power_1",
+          "accepted": true,
+          "checks": [
+            {
+              "name": "outside_vertices_exact",
+              "passed": true,
+              "detail": "All vertices outside selected AABB remain bitwise unchanged."
+            },
+            {
+              "name": "triangle_indices_preserved",
+              "passed": true,
+              "detail": "Original triangle indices and vertex count retained."
+            },
+            {
+              "name": "finite_vertices",
+              "passed": true,
+              "detail": "No NaN/infinite coordinates."
+            },
+            {
+              "name": "watertight_positive_volume",
+              "passed": true,
+              "detail": "Closed consistently oriented mesh with positive signed volume."
+            },
+            {
+              "name": "no_collapsed_faces",
+              "passed": true,
+              "detail": "All triangle doubled areas exceed numerical floor."
+            },
+            {
+              "name": "no_flipped_faces",
+              "passed": true,
+              "detail": "Every normal retains positive dot product with its original normal; conservative under large rotations."
+            },
+            {
+              "name": "no_detected_triangle_intersection",
+              "passed": true,
+              "detail": "Floating-point interior triangle SAT, relative boundary margin1e-8; no intersection detected"
+            },
+            {
+              "name": "requested_peak_translation",
+              "passed": true,
+              "detail": "Requested interior peak 12.0 mm; measured magnitude 12.0 mm. Transition strategy may move other selected vertices less."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "command": {
+      "op": "translate",
+      "axis": "x",
+      "amount_mm": 1
+    },
+    "explanation": "The selected object will be moved 1 mm to the right along the x-axis as requested.",
+    "preview": {
+      "accepted": true,
+      "command": {
+        "op": "translate",
+        "axis": "x",
+        "amount_mm": 1
+      },
+      "selection": {
+        "part_id": "2d0f2b7617344d418a4c3460163f1c47",
+        "region": {
+          "min": [
+            -2.5400999618530276,
+            -1.2700999809265137,
+            -0.0001
+          ],
+          "max": [
+            2.5400999618530276,
+            2.5400999618530276,
+            60.96009908447266
+          ]
+        },
+        "point": [
+          0,
+          0.634999990463257,
+          30.479999542236328
+        ]
+      },
+      "repair_trials": [
+        {
+          "strategy": "sharp",
+          "accepted": false,
+          "checks": [
+            {
+              "name": "outside_vertices_exact",
+              "passed": true,
+              "detail": "All vertices outside selected AABB remain bitwise unchanged."
+            },
+            {
+              "name": "triangle_indices_preserved",
+              "passed": true,
+              "detail": "Original triangle indices and vertex count retained."
+            },
+            {
+              "name": "finite_vertices",
+              "passed": true,
+              "detail": "No NaN/infinite coordinates."
+            },
+            {
+              "name": "watertight_positive_volume",
+              "passed": true,
+              "detail": "Closed consistently oriented mesh with positive signed volume."
+            },
+            {
+              "name": "no_collapsed_faces",
+              "passed": true,
+              "detail": "All triangle doubled areas exceed numerical floor."
+            },
+            {
+              "name": "no_flipped_faces",
+              "passed": false,
+              "detail": "Every normal retains positive dot product with its original normal; conservative under large rotations."
+            },
+            {
+              "name": "requested_peak_translation",
+              "passed": true,
+              "detail": "Requested interior peak 1.0 mm; measured magnitude 1.0 mm. Transition strategy may move other selected vertices less."
+            }
+          ]
+        },
+        {
+          "strategy": "interior_transition_power_1",
+          "accepted": true,
+          "checks": [
+            {
+              "name": "outside_vertices_exact",
+              "passed": true,
+              "detail": "All vertices outside selected AABB remain bitwise unchanged."
+            },
+            {
+              "name": "triangle_indices_preserved",
+              "passed": true,
+              "detail": "Original triangle indices and vertex count retained."
+            },
+            {
+              "name": "finite_vertices",
+              "passed": true,
+              "detail": "No NaN/infinite coordinates."
+            },
+            {
+              "name": "watertight_positive_volume",
+              "passed": true,
+              "detail": "Closed consistently oriented mesh with positive signed volume."
+            },
+            {
+              "name": "no_collapsed_faces",
+              "passed": true,
+              "detail": "All triangle doubled areas exceed numerical floor."
+            },
+            {
+              "name": "no_flipped_faces",
+              "passed": true,
+              "detail": "Every normal retains positive dot product with its original normal; conservative under large rotations."
+            },
+            {
+              "name": "no_detected_triangle_intersection",
+              "passed": true,
+              "detail": "Floating-point interior triangle SAT, relative boundary margin1e-8; no intersection detected"
+            },
+            {
+              "name": "requested_peak_translation",
+              "passed": true,
+              "detail": "Requested interior peak 1.0 mm; measured magnitude 1.0 mm. Transition strategy may move other selected vertices less."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "command": {
+      "op": "translate",
+      "axis": "x",
+      "amount_mm": 1
+    },
+    "explanation": "The selected object will be moved 1 mm to the right along the x-axis as requested.",
+    "preview": {
+      "accepted": true,
+      "command": {
+        "op": "translate",
+        "axis": "x",
+        "amount_mm": 1
+      },
+      "selection": {
+        "part_id": "2d0f2b7617344d418a4c3460163f1c47",
+        "region": {
+          "min": [
+            -2.5400999618530276,
+            -1.2700999809265137,
+            -0.0001
+          ],
+          "max": [
+            2.5400999618530276,
+            2.5400999618530276,
+            60.96009908447266
+          ]
+        },
+        "point": [
+          0,
+          0.634999990463257,
+          30.479999542236328
+        ]
+      },
+      "repair_trials": [
+        {
+          "strategy": "interior_transition_power_1",
+          "accepted": true,
+          "checks": [
+            {
+              "name": "outside_vertices_exact",
+              "passed": true,
+              "detail": "All vertices outside selected AABB remain bitwise unchanged."
+            },
+            {
+              "name": "triangle_indices_preserved",
+              "passed": true,
+              "detail": "Original triangle indices and vertex count retained."
+            },
+            {
+              "name": "finite_vertices",
+              "passed": true,
+              "detail": "No NaN/infinite coordinates."
+            },
+            {
+              "name": "watertight_positive_volume",
+              "passed": true,
+              "detail": "Closed consistently oriented mesh with positive signed volume."
+            },
+            {
+              "name": "no_collapsed_faces",
+              "passed": true,
+              "detail": "All triangle doubled areas exceed numerical floor."
+            },
+            {
+              "name": "no_flipped_faces",
+              "passed": true,
+              "detail": "Every normal retains positive dot product with its original normal; conservative under large rotations."
+            },
+            {
+              "name": "no_detected_triangle_intersection",
+              "passed": true,
+              "detail": "Floating-point interior triangle SAT, relative boundary margin1e-8; no intersection detected"
+            },
+            {
+              "name": "requested_peak_translation",
+              "passed": true,
+              "detail": "Requested interior peak 1.0 mm; measured magnitude 1.0 mm. Transition strategy may move other selected vertices less."
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

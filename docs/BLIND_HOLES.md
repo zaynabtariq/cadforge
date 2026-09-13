@@ -1,0 +1,17 @@
+# Depth-controlled holes from a selected surface
+
+An actual imported-box experiment exposed a depth error: “drill a hole radius 2 mm depth 4 mm here” produced only 2 mm depth when the clicked point was on the top surface. The old operation centered a 4 mm-high cutting cylinder at that surface. The failed plan, accepted geometry, and independently measured floor are retained in `artifacts/blind-hole/before.json`.
+
+The reusable `drill_blind_hole` operation measures depth inward from a surface entry point. Its exterior overrun is added outside the stock; the cavity bottom stays exactly at entry + direction × depth. Top entries drill toward −Z, bottom entries toward +Z. Explicit centered-cylinder requests retain their geometric-center semantics. A blind hole without a depth asks for clarification.
+
+The initial repair achieved the full requested 4 mm depth. Independent review then found a second failure: a pre-existing 0.006 mm through-hole could survive in the floor while aggregate volume and area differences remained within tolerance. This requires a floor topology check, not a smaller area tolerance. The counterexample and subsequent verification are retained under `artifacts/blind-hole/`.
+
+The repaired checker requires the actual floor patch to have one connected disk, Euler characteristic 1, and exactly one closed boundary loop. It also subtracts original stock from the inward cutting tool and requires no remaining mesh faces, detecting representable small voids above the floor. These checks reject the reviewer’s counterexample while leaving the old area/volume tolerances unchanged. Boolean-kernel resolution remains a numerical limit; this is not an exact proof about sub-resolution defects.
+
+The planner and backend reject side/recessed entry points for this operation, depths reaching through the stock, and detected edge breakouts or incomplete stock engagement. The cutter is an inscribed 64-sided polygon, not an exact analytic cylinder. Geometry checks on an imported faceted mesh do not establish machining tolerances, material strength, or manufacturing qualification.
+
+The actual browser test is `scripts/test_blind_hole_studio_browser.mjs`: import the unrelated public plate STL, click a material point in the top view, request “Drill a 4 mm diameter hole 3 mm deep here”, preview, Apply, Export, and Undo. Independent exported-mesh measurements check the cavity floor, removed volume, unchanged bounds, watertightness, unchanged saved geometry before Apply, and exact Undo. Raw browser recording and results are in `artifacts/blind-hole-studio-test/`.
+
+This change is an engineering-agent-authored repair and reusable operation. It is not model-weight training or evidence that the runtime invents arbitrary new CAD commands. Frozen benchmark code and heldout cases were not used or changed. Live browser model usage is retained in result files; engineering authoring costs are not fully metered.
+
+Final verification: the full suite passed 252 tests (14 warnings) in 97.15 seconds. The frontend production build passed with a bundle-size warning. The public-STL browser run measured 2.999999999999886 mm for a requested 3 mm depth, with all geometry checks and exact Undo passing. Its 11.92-second recording is `artifacts/blind-hole-studio-test/blind-hole-demo.mp4`. Two live browser runs used 2,514 input and 165 output tokens (2,679 total); detailed usage is in `artifacts/blind-hole/costs.json`.

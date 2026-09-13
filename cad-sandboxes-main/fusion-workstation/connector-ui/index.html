@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fusion · Your workspace</title><link rel="stylesheet" href="style.css"></head>
+<body class="auth-page"><div class="app-shell">
+<main class="auth-stage">
+<ol id="steps" class="progress-rail" aria-label="Connection progress"><li><span>01</span><strong>Workspace</strong><b></b></li><li><span>02</span><strong>Autodesk</strong><b></b></li><li><span>03</span><strong>Ready</strong><b></b></li></ol>
+<section class="auth-content" aria-labelledby="auth-title">
+<h1 id="auth-title">Your workspace.</h1><p id="subtitle">Connect Autodesk Fusion to get started.</p>
+<div id="form-error" role="alert"></div>
+<button id="connect" class="primary wide">Connect Fusion <span aria-hidden="true">↗</span></button>
+<button id="retry" class="primary wide hidden">Try again <span aria-hidden="true">↗</span></button>
+<form id="auth-form" class="hidden" autocomplete="off">
+<label id="email-field">Email<input id="email" name="email" type="email" autocomplete="username" required placeholder="you@example.com"></label>
+<label id="password-field">Password<input id="password" name="password" type="password" autocomplete="off" required placeholder="Your Autodesk password"></label>
+<label id="code-field" class="hidden">Verification code<input id="code" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" placeholder="000000"></label>
+<button id="submit-auth" type="submit" class="primary wide">Continue</button></form>
+<a id="open-viewer" class="primary button-link wide hidden" href="viewer?workstation=fresh">Open workspace <span aria-hidden="true">↗</span></a>
+<div id="waiting-indicator" class="waiting-indicator hidden" aria-hidden="true"><span></span><span></span><span></span></div>
+</section>
+</main>
+<footer class="auth-footer"><span id="status" role="status">Ready to connect</span></footer>
+</div><script src="app.js"></script></body></html>

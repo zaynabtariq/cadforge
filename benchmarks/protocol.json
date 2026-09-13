@@ -1,0 +1,20 @@
+{
+  "budget": {
+    "attempts": 4,
+    "model_tokens": 12000,
+    "tool_calls": 12,
+    "wall_seconds": 120.0
+  },
+  "development_cases": 24,
+  "execution": "One hidden evaluation per mode; heldout learning disabled; no fixture or evaluator modification after freeze.",
+  "feedback": "Hidden aggregate counts only; no case feedback or hidden artifact ingestion into learning.",
+  "hidden_cases": 100,
+  "modes": [
+    "none",
+    "retrieved",
+    "learned"
+  ],
+  "physical_readiness": "Not assessed by geometry benchmark; always false without independent thermal, optical, structural and ergonomic evidence.",
+  "score": "One point only when every required geometry/artifact/constraint check passes. No partial credit.",
+  "version": 1
+}

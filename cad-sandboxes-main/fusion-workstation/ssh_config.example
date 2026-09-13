@@ -1,0 +1,10 @@
+Host fusion-workstation
+    HostName configure-through-workstation.py
+    User FusionAuth
+    IdentityFile ~/.ssh/fusion-workstation
+    IdentitiesOnly yes
+    StrictHostKeyChecking yes
+    UserKnownHostsFile ~/.ssh/fusion-known-hosts
+    HostKeyAlias fusion-auth
+    ServerAliveInterval 30
+    ServerAliveCountMax 3

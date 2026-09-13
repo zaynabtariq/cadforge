@@ -1,0 +1,13 @@
+# Revalidating retained region learning
+
+Changing the region validator invalidates old strategy priorities. `cadforge.revalidate_learning.revalidate` now resolves each original local preview's exact input geometry by its retained vertex/triangle fingerprint and executes its command again under the current checks. It resolves all cases before replay, including failures. Missing sources, mismatched preview identities, budget-censored execution, or a concurrent store/context change prevent publication.
+
+Each replay starts with an isolated empty priority store. This intentionally pays for the original candidate order, so an earlier successful replay cannot hide a later failed candidate. Publication atomically adds the new measured evidence and replay lineage; it preserves original evidence and quarantines. Lineage prevents replaying the same case twice under the same validator, or multiplying prior replays as new independent cases. This is local development revalidation, not benchmark evaluation or a claim that broad strategy support has been established.
+
+The actual default store revalidation `12b8b8af54114e3c9060fed24061130b` replayed six retained cases, spending **12 CAD candidates**. Each replay rejected its first candidate and passed its checked repair. Both X and Y strategy priorities became eligible in the new context. The old evidence was retained. The report is in `artifacts/learning-revalidation/12b8b8af54114e3c9060fed24061130b.json`. This cost is additional maintenance/discovery overhead; it is not hidden in the one-attempt reuse count.
+
+Six dedicated tests execute real geometry and cover failure retention, idempotency, new-context lineage, missing source, preview identity and concurrent store changes. Imported project histories are not ingestion sources: they contain no executable local preview evidence. This is a local trusted workspace boundary, not protection against arbitrary filesystem tampering.
+
+Legacy sequence-step evidence may have synthetic identifiers and missing scratch geometry. Such evidence blocks revalidation rather than being skipped. Durable provenance for newly executed sequence counterexamples is required to prevent that loss going forward.
+
+New composed counterexamples now retain exact speculative input geometry and a normal workspace preview ID in a detached audit snapshot before scratch cleanup. These previews cannot be committed. Tests cover both first-step failures and failures after a preceding successful speculative transform, including resolution after service restart. Existing legacy records without that geometry still fail closed; no source evidence is invented.

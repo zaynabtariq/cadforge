@@ -1,0 +1,7 @@
+# Fastener tool access
+
+`EngineeringContract.tool_access` accepts independent straight cylindrical approach corridors with explicit positions, directions, radii, lengths and sources. The evaluator checks their intersection with all printed parts. Unspecified access now produces a separate blocked gate; the reference default consequently has one additional blocker compared with the earlier 43/0/11 report. Existing fastener strength, torque and physical qualification gates remain unchanged.
+
+A real BRep regression fixture has a clear 3 mm shaft bore and an obstructed 6 mm driver approach. The access gate fails it; a larger recessed pocket clears the same unchanged gate. Five invalid-contract cases are rejected before measurements. The combined tool-access, engineering and product suites pass 28 tests.
+
+`scripts/screen_tool_access.py` freezes a provisional contract before building the reference glasses, then tests both ends of eight fastener axes. All 16 corridors pass for an assumed 6 mm diameter and 20 mm straight approach. Records are in `artifacts/production/tool-access/`. These dimensions are development assumptions, not purchased-tool specifications. Printed-part clearance does not include electronics, washers, nuts, driver-handle sweep, turning motion, assembly order or fastener engagement. This is a reusable geometric check, not a learned assembly policy or production-release result.

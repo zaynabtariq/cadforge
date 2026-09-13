@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Part → Quote</title><link rel="stylesheet" href="/style.css">
+<script type="importmap">{"imports":{"three":"/vendor/three/build/three.module.js","three/addons/":"/vendor/three/examples/jsm/"}}</script>
+</head><body>
+<header><a href="/" class="brand">part<span>→</span>quote</a><div class="header-links"><a href="/theme">Theme study ↗</a><span class="tag">JLC3DP · US / USD</span></div></header>
+<main>
+<div class="intro"><div><p class="eyebrow">FROM YOUR CAD SANDBOX</p><h1>Let’s make your part.</h1><p>Explore your model. Make a few choices. We’ll build the quote together.</p></div><button id="reset" class="quiet" hidden>Start a new quote</button></div>
+<section id="upload-panel" class="upload card"><span class="file-mark" aria-hidden="true">↥</span><h2>Start with your model</h2><p>STL, STEP, OBJ, or 3MF · Up to 20 MB<br>Your preview and quote preparation start together.</p><label class="primary file-button">Choose a CAD file<input id="file" type="file" accept=".stl,.step,.stp,.obj,.3mf"></label><button id="demo" class="quiet">Try the 20 mm test cube</button></section>
+<div id="workspace" hidden>
+<nav class="steps" aria-label="Quote steps"><button type="button" data-step="1" aria-current="step"><span>1</span>Check your model</button><span class="step-line"></span><button type="button" data-step="2"><span>2</span>Choose material</button><span class="step-line"></span><button type="button" data-step="3"><span>3</span>Review your quote</button></nav>
+<div class="guided-layout">
+<section class="card model-card">
+<div class="viewer-heading"><div><p class="eyebrow">YOUR MODEL</p><strong id="filename"></strong></div><span class="badge" id="preview-badge">Opening preview</span></div>
+<div id="viewer" class="viewer"><div class="viewer-placeholder"><span class="preview-shape">◇</span><p>Opening your model…</p></div></div>
+<div class="viewer-tools"><span>Drag to rotate · scroll to zoom</span><div><button type="button" id="wireframe" class="quiet" aria-pressed="false" disabled>Wireframe</button><button type="button" id="reset-view" class="quiet" disabled>Reset view</button></div></div>
+<div class="model-metrics"><div><span>Dimensions</span><strong id="dimensions">Reading geometry…</strong></div><div><span>File</span><strong id="file-info">—</strong></div></div><p id="unit-note" class="footnote">Geometry preview; material and color are selected separately.</p><p id="preview-error" class="error" hidden></p>
+<div class="mini-estimate"><span id="mini-label">Your agent is preparing the first estimate</span><strong id="mini-price">Working in the background</strong></div>
+</section>
+<section class="card guide-card">
+<div class="agent"><span class="agent-icon" aria-hidden="true">✳</span><div><div class="agent-label">YOUR QUOTING AGENT <span id="pulse" class="pulse busy"></span></div><p id="agent-message" aria-live="polite">I’m preparing the model while you take a look.</p><span id="connection">Connecting…</span></div></div>
+<form id="settings-form">
+<section data-panel="1" class="step-panel"><p class="eyebrow">STEP 1 / 3</p><h2>Does everything look right?</h2><p class="step-description">Spin the model and check its size. Tell me what we’re making while I upload it.</p>
+<label>What are you making? <span class="hint">30 characters max</span><input id="description" type="text" maxlength="30" placeholder="e.g. Sensor enclosure" required></label>
+<div class="row"><label>Product category<select id="category"><option value="blocks">Enclosures, blocks & plates</option><option value="connectors">Connectors & brackets</option><option value="irregular">Irregular shapes</option><option value="office">Office accessories</option><option value="toys">Toys & entertainment</option></select></label><label>Quantity<input id="quantity" type="number" min="1" max="100000" value="1" required></label></div>
+<div class="step-actions"><button type="button" id="next-material" class="primary wide">Looks right · choose material →</button></div></section>
+<section data-panel="2" class="step-panel" hidden><p class="eyebrow">STEP 2 / 3</p><h2>How should we make it?</h2><p class="step-description">Make your choices now. I’ll check the available options against your model.</p>
+<label>Printing process<select id="technology"><option value="SLA">SLA · resin printing</option><option value="FDM">FDM · plastic printing</option><option value="MJF">MJF · nylon printing</option><option value="SLS">SLS · nylon printing</option><option value="SLM">SLM · metal printing</option></select></label>
+<label>Material<select id="material"><option value="">Use the process default</option></select></label><div class="option-status"><span id="options-dot"></span><p id="options-note">Previously seen options are available while your model is checked.</p></div>
+<label>Color<select id="color"><option value="">Use the material default</option></select></label><div id="defaults" class="defaults">Standard finish and packaging. The agent will confirm these with JLC3DP.</div>
+<div class="step-actions"><button type="button" data-back="1" class="quiet">← Model</button><button type="button" id="next-review" class="primary">Build my quote →</button></div></section>
+<section data-panel="3" class="step-panel" hidden><p class="eyebrow">STEP 3 / 3</p><h2>Your part, priced.</h2><p class="step-description">I’ll confirm manufacturing first, then add the shipping estimate.</p><div id="review-summary" class="review-summary"></div>
+<span id="quote-badge" class="badge pending">Checking your choices</span><p id="quote-config" class="muted"></p><div class="price-line"><span>Manufacturing</span><strong id="manufacturing">—</strong></div><div class="price-line"><span>US shipping estimate</span><strong id="shipping">—</strong></div><div class="total"><span>Estimated total</span><strong id="total">—</strong></div><div class="delivery"><p id="build-time">Build time appears after analysis.</p><p id="shipping-details"></p></div><p class="footnote">Country-level shipping estimate. Address, taxes, and duties are unverified. Final price is subject to provider review.</p>
+<div class="step-actions"><button type="button" data-back="2" class="quiet">← Edit material</button><button id="quote-button" class="primary" type="submit">Refresh estimate</button></div></section>
+</form>
+<section id="warning-panel" class="notice" hidden aria-live="assertive"><strong>Let’s adjust this choice</strong><p id="warning-message"></p></section><details class="activity"><summary>What the agent is doing</summary><ol id="activity"></ol></details>
+</section>
+</div><details class="debug"><summary>Session details</summary><pre id="debug"></pre></details></div>
+<p id="global-error" class="error" role="alert"></p></main><footer>CAD → manufacture · Quote prototype · No order is placed</footer><script src="/app.js"></script></body></html>

@@ -1,0 +1,152 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.24.2",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "544957bc73e86734448db7372f99734d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "e0a3831c5d83f160d5236edb7b3e2783",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"continual-design-studio\">Continual Design Studio</h1>\n<span class=\"paragraph\">Build editable camera glasses or widen a robot link while checking its pivot interfaces.\nDesigns run only when you submit a form. All dimensions are millimeters.</span>\n<span class=\"paragraph\"><a href=\"https://wandb.ai/zzaynabb-03-radpilot/cadforge-continual/weave\" rel=\"noopener noreferrer\" target=\"_blank\">View development traces in Weave</a>\n\u00b7 Local persistent learning uses measured CAD experiments. It is <strong>not printer calibration</strong>.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "5ef7fcfd537b50785927175956cb62e9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='vblA-39' random-id='383c92e3-d6c5-012d-9958-78fe80cb7ca5'><marimo-tabs data-initial-value='&quot;&quot;' data-label='null' data-tabs='[&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eCamera glasses&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;,&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eRobot link widening&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;]' data-orientation='&quot;horizontal&quot;'><div data-kind='tab'><marimo-ui-element object-id='vblA-20' random-id='e46bc7bd-fdd4-b506-5814-13f13f9454a7'><marimo-form data-initial-value='null' data-label='null' data-element-id='&quot;vblA-19&quot;' data-loading='false' data-bordered='true' data-submit-button-label='&quot;Build glasses and measure gates&quot;' data-submit-button-disabled='false' data-clear-on-submit='false' data-show-clear-button='false' data-clear-button-label='&quot;Clear&quot;' data-should-validate='false'><marimo-ui-element object-id='vblA-19' random-id='90b7acd4-3fe1-77e7-59d5-3efc499f4bcb'><marimo-dict data-initial-value='{&quot;lens_width&quot;:52.0,&quot;lens_height&quot;:42.4,&quot;bridge&quot;:18.0,&quot;temple_length&quot;:145.0,&quot;wall&quot;:2,&quot;clearance&quot;:0.6}' data-label='null' data-element-ids='{&quot;vblA-13&quot;:&quot;lens_width&quot;,&quot;vblA-14&quot;:&quot;lens_height&quot;,&quot;vblA-15&quot;:&quot;bridge&quot;,&quot;vblA-16&quot;:&quot;temple_length&quot;,&quot;vblA-17&quot;:&quot;wall&quot;,&quot;vblA-18&quot;:&quot;clearance&quot;}'><span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"camera-glasses-mjf-pa12-external-usb-power\">Camera glasses \u00b7 MJF PA12 / external USB power</h3>\n<span class=\"paragraph\">Reference sizing comes from a commercial 52\u201318\u2013145 frame; wearer fit is unverified.</span>\n<span class=\"paragraph\"><marimo-ui-element object-id='vblA-13' random-id='4f5682a2-069c-da56-272d-69fbac0e37b5'><marimo-number data-initial-value='52.0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eLens width&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='35' data-stop='70' data-step='0.1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element> <marimo-ui-element object-id='vblA-14' random-id='f24c0710-9c68-1e5e-7e56-ccbab3e17740'><marimo-number data-initial-value='42.4' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eLens height&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='25' data-stop='60' data-step='0.1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element> <marimo-ui-element object-id='vblA-15' random-id='9aa520ca-830f-3d7c-e03b-9927c7134398'><marimo-number data-initial-value='18.0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eBridge&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='12' data-stop='26' data-step='0.5' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element> <marimo-ui-element object-id='vblA-16' random-id='c5abd693-68fa-4279-8e9e-6ae13f43f74d'><marimo-number data-initial-value='145.0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eTemple length&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='120' data-stop='170' data-step='1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='vblA-17' random-id='8f78a04a-dc1c-3cc1-09f0-27bd69ecf4d1'><marimo-number data-initial-value='2' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eWall&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='1' data-stop='4' data-step='0.1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element> <marimo-ui-element object-id='vblA-18' random-id='e86fc771-89fd-01e8-601b-0b2eebce0d78'><marimo-number data-initial-value='0.6' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eComponent clearance&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='0.2' data-stop='2' data-step='0.05' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element></span></span></marimo-dict></marimo-ui-element></marimo-form></marimo-ui-element></div><div data-kind='tab'><marimo-ui-element object-id='vblA-38' random-id='6a92a7f3-0196-5214-9ee6-f004c41c9d56'><marimo-form data-initial-value='null' data-label='null' data-element-id='&quot;vblA-37&quot;' data-loading='false' data-bordered='true' data-submit-button-label='&quot;Build link and attempt widening&quot;' data-submit-button-disabled='false' data-clear-on-submit='false' data-show-clear-button='false' data-clear-button-label='&quot;Clear&quot;' data-should-validate='false'><marimo-ui-element object-id='vblA-37' random-id='06af8ad3-1ad6-ce86-207f-9e61af2062b8'><marimo-dict data-initial-value='{&quot;center_distance&quot;:80,&quot;width&quot;:20,&quot;new_width&quot;:28,&quot;thickness&quot;:6,&quot;pivot_diameter&quot;:4}' data-label='null' data-element-ids='{&quot;vblA-32&quot;:&quot;center_distance&quot;,&quot;vblA-33&quot;:&quot;width&quot;,&quot;vblA-34&quot;:&quot;new_width&quot;,&quot;vblA-35&quot;:&quot;thickness&quot;,&quot;vblA-36&quot;:&quot;pivot_diameter&quot;}'><span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"robot-link-widen-while-preserving-pivots\">Robot link \u00b7 widen while preserving pivots</h3>\n<span class=\"paragraph\">This is a two-pivot link, not a complete powered robot arm.</span>\n<span class=\"paragraph\"><marimo-ui-element object-id='vblA-32' random-id='0eebeee2-e3f3-46e0-a6bd-8dd6cdeb17e3'><marimo-number data-initial-value='80' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003ePivot spacing&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='30' data-stop='200' data-step='1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element> <marimo-ui-element object-id='vblA-33' random-id='ceb32919-3d12-96a3-c14a-04505ce2b399'><marimo-number data-initial-value='20' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eOriginal width&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='16' data-stop='40' data-step='1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element> <marimo-ui-element object-id='vblA-34' random-id='594cb774-464e-0d69-6f23-ab8e6dd30d23'><marimo-number data-initial-value='28' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eRequested wider width&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='16' data-stop='45' data-step='1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element> <marimo-ui-element object-id='vblA-35' random-id='09355dc9-78a5-ac93-eda4-5e386751b9be'><marimo-number data-initial-value='6' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eBody thickness&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='3' data-stop='15' data-step='0.5' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element> <marimo-ui-element object-id='vblA-36' random-id='c8b95f53-b10b-a51f-214d-19acf3ea6958'><marimo-number data-initial-value='4' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003ePivot bore&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='2' data-stop='8' data-step='0.1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element></span></span></marimo-dict></marimo-ui-element></marimo-form></marimo-ui-element></div></marimo-tabs></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "216b87f4d09d5a43cb8332d379c34b40",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "d9a72753317ecc0eb7b723f0840a5727",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "ancestor-stopped",
+          "evalue": "This cell wasn't run because an ancestor was stopped with `mo.stop`: ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "9acd7aad3d1d8085870f2c5a398774ce",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "efcfd4e1c155097ad5500dac99f58f25",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "ancestor-stopped",
+          "evalue": "This cell wasn't run because an ancestor was stopped with `mo.stop`: ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "389c782264f4b37f3222c44a9bf037ef",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-ui-element object-id='SFPL-5' random-id='f9293b06-3b0b-7a00-9fab-c63bc41cf249'><marimo-form data-initial-value='null' data-label='null' data-element-id='&quot;SFPL-4&quot;' data-loading='false' data-bordered='true' data-submit-button-label='&quot;Run intentional learning task&quot;' data-submit-button-disabled='false' data-clear-on-submit='false' data-show-clear-button='false' data-clear-button-label='&quot;Clear&quot;' data-should-validate='false'><marimo-ui-element object-id='SFPL-4' random-id='5cbdba56-c98e-27ec-96f6-c611c0a71c05'><marimo-dict data-initial-value='{&quot;cloud&quot;:false}' data-label='null' data-element-ids='{&quot;SFPL-3&quot;:&quot;cloud&quot;}'><span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"run-a-persistent-learning-task\">Run a persistent learning task</h3>\n<span class=\"paragraph\">Execute development fit coupons, infer parameter commands, challenge them on fresh cases,\nand reuse healthy promoted commands. This writes the local learning database and development artifacts.\nIt does not access the frozen hidden benchmark.</span>\n<span class=\"paragraph\"><marimo-ui-element object-id='SFPL-3' random-id='7aacc1b0-1e70-fd29-5e0b-23efa6019a11'><marimo-checkbox data-initial-value='false' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eSend this development run to configured Weave project&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-disabled='false'></marimo-checkbox></marimo-ui-element></span></span></marimo-dict></marimo-ui-element></marimo-form></marimo-ui-element><marimo-ui-element object-id='SFPL-6' random-id='4bd1014e-ec8f-cc3d-7680-ebeb816ddf2e'><marimo-button data-initial-value='0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eRefresh local learning audit&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-kind='&quot;neutral&quot;' data-disabled='false' data-full-width='false'></marimo-button></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "20ba964b80ff2985cf15de6fcd36513c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "814c694fd687fd1b40ca6b841ea7a733",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "ancestor-stopped",
+          "evalue": "This cell wasn't run because an ancestor was stopped with `mo.stop`: ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "a6b46be850bc5a55d4980feeb3664c51",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"local-learning-audit-read-only-view\">Local learning audit \u00b7 read-only view</h3></span><marimo-json-output data-json-data='{&quot;experiments&quot;:17,&quot;candidates&quot;:2,&quot;promotions&quot;:2,&quot;quarantines&quot;:0,&quot;events&quot;:21}' data-value-types='&quot;json&quot;'></marimo-json-output><marimo-ui-element object-id='Kclp-0' random-id='46c7d580-020c-1200-60dc-4fe24bbd5d55'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;name&#92;&quot;:&#92;&quot;supported_fastener&#92;&quot;,&#92;&quot;version&#92;&quot;:&#92;&quot;4b37a018caaa0db3&#92;&quot;,&#92;&quot;status&#92;&quot;:&#92;&quot;promoted&#92;&quot;,&#92;&quot;commands&#92;&quot;:&#92;&quot;[{&#92;&#92;&#92;&quot;factor&#92;&#92;&#92;&quot;: 1.0, &#92;&#92;&#92;&quot;operation&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;set&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;boss_outer_diameter&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;source_parameter&#92;&#92;&#92;&quot;: null, &#92;&#92;&#92;&quot;value&#92;&#92;&#92;&quot;: 9.619685745114565e-16}, {&#92;&#92;&#92;&quot;factor&#92;&#92;&#92;&quot;: 1.000000000000001, &#92;&#92;&#92;&quot;operation&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;add&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;boss_outer_diameter&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;source_parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;bore_diameter&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;value&#92;&#92;&#92;&quot;: 0.0}, {&#92;&#92;&#92;&quot;factor&#92;&#92;&#92;&quot;: 2.0, &#92;&#92;&#92;&quot;operation&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;add&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;boss_outer_diameter&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;source_parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;min_wall&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;value&#92;&#92;&#92;&quot;: 0.0}]&#92;&quot;,&#92;&quot;parents&#92;&quot;:&#92;&quot;10377a7e0b79&#92;&quot;},{&#92;&quot;name&#92;&quot;:&#92;&quot;clearance_bore&#92;&quot;,&#92;&quot;version&#92;&quot;:&#92;&quot;10377a7e0b794245&#92;&quot;,&#92;&quot;status&#92;&quot;:&#92;&quot;promoted&#92;&quot;,&#92;&quot;commands&#92;&quot;:&#92;&quot;[{&#92;&#92;&#92;&quot;factor&#92;&#92;&#92;&quot;: 1.0, &#92;&#92;&#92;&quot;operation&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;set&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;bore_diameter&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;source_parameter&#92;&#92;&#92;&quot;: null, &#92;&#92;&#92;&quot;value&#92;&#92;&#92;&quot;: 1.387140009910062e-15}, {&#92;&#92;&#92;&quot;factor&#92;&#92;&#92;&quot;: 0.9999999999999993, &#92;&#92;&#92;&quot;operation&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;add&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;bore_diameter&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;source_parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;fastener_diameter&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;value&#92;&#92;&#92;&quot;: 0.0}, {&#92;&#92;&#92;&quot;factor&#92;&#92;&#92;&quot;: 1.999999999999997, &#92;&#92;&#92;&quot;operation&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;add&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;bore_diameter&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;source_parameter&#92;&#92;&#92;&quot;: &#92;&#92;&#92;&quot;radial_clearance&#92;&#92;&#92;&quot;, &#92;&#92;&#92;&quot;value&#92;&#92;&#92;&quot;: 0.0}]&#92;&quot;,&#92;&quot;parents&#92;&quot;:&#92;&quot;&#92;&quot;}]&quot;' data-total-rows='2' data-total-columns='5' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-show-filters='false' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element><marimo-accordion data-labels='[&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eRecent audit events&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;]' data-multiple='false'><div><marimo-ui-element object-id='Kclp-1' random-id='2f96bc57-8c0d-61fe-690f-e390616bb544'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;sequence&#92;&quot;:21,&#92;&quot;event&#92;&quot;:&#92;&quot;experiment&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789265109.132443},{&#92;&quot;sequence&#92;&quot;:20,&#92;&quot;event&#92;&quot;:&#92;&quot;promotion&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264927.108414},{&#92;&quot;sequence&#92;&quot;:19,&#92;&quot;event&#92;&quot;:&#92;&quot;experiment&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264927.1073658},{&#92;&quot;sequence&#92;&quot;:18,&#92;&quot;event&#92;&quot;:&#92;&quot;experiment&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264927.046504},{&#92;&quot;sequence&#92;&quot;:17,&#92;&quot;event&#92;&quot;:&#92;&quot;experiment&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264926.99313},{&#92;&quot;sequence&#92;&quot;:16,&#92;&quot;event&#92;&quot;:&#92;&quot;hypothesis&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264926.941206},{&#92;&quot;sequence&#92;&quot;:15,&#92;&quot;event&#92;&quot;:&#92;&quot;experiment&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264926.939747},{&#92;&quot;sequence&#92;&quot;:14,&#92;&quot;event&#92;&quot;:&#92;&quot;experiment&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264925.754126},{&#92;&quot;sequence&#92;&quot;:13,&#92;&quot;event&#92;&quot;:&#92;&quot;experiment&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264924.03618},{&#92;&quot;sequence&#92;&quot;:12,&#92;&quot;event&#92;&quot;:&#92;&quot;experiment&#92;&quot;,&#92;&quot;created_unix&#92;&quot;:1789264923.24349}]&quot;' data-total-rows='20' data-total-columns='3' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-show-filters='false' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element></div></marimo-accordion><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Refresh after a learning task to see committed updates. This panel opens SQLite in read-only mode and shows no credentials or hidden benchmark cases.</span></span></div>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

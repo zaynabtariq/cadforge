@@ -1,0 +1,512 @@
+[
+  {
+    "expected": {
+      "board_height": 8,
+      "board_length": 75,
+      "board_width": 30,
+      "bridge": 18,
+      "camera_diameter": 12,
+      "clearance": 0.8,
+      "lens_height": 34,
+      "lens_width": 42,
+      "temple_length": 155,
+      "wall": 2.0
+    },
+    "family": "glasses",
+    "id": "dev-glasses-000",
+    "request": "Create a glasses frame with a Raspberry Pi board housing and a circular camera aperture. Required dimensions: wall=2 mm, clearance=0.8 mm, board_length=75 mm, board_width=30 mm, board_height=8 mm, camera_diameter=12 mm, lens_width=42 mm, lens_height=34 mm, bridge=18 mm, temple_length=155 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 12,
+      "board_length": 75,
+      "board_width": 30,
+      "bridge": 22,
+      "camera_diameter": 10,
+      "clearance": 0.8,
+      "lens_height": 28,
+      "lens_width": 42,
+      "temple_length": 155,
+      "wall": 3.0
+    },
+    "family": "glasses",
+    "id": "dev-glasses-001",
+    "request": "Create a glasses frame with a Raspberry Pi board housing and a circular camera aperture. Required dimensions: wall=3 mm, clearance=0.8 mm, board_length=75 mm, board_width=30 mm, board_height=12 mm, camera_diameter=10 mm, lens_width=42 mm, lens_height=28 mm, bridge=22 mm, temple_length=155 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 6,
+      "board_length": 52,
+      "board_width": 38,
+      "bridge": 18,
+      "camera_diameter": 10,
+      "clearance": 0.6,
+      "lens_height": 40,
+      "lens_width": 42,
+      "temple_length": 130,
+      "wall": 3.0
+    },
+    "family": "glasses",
+    "id": "dev-glasses-002",
+    "request": "Create a glasses frame with a Raspberry Pi board housing and a circular camera aperture. Required dimensions: wall=3 mm, clearance=0.6 mm, board_length=52 mm, board_width=38 mm, board_height=6 mm, camera_diameter=10 mm, lens_width=42 mm, lens_height=40 mm, bridge=18 mm, temple_length=130 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 8,
+      "board_length": 52,
+      "board_width": 38,
+      "bridge": 18,
+      "camera_diameter": 6,
+      "clearance": 0.4,
+      "lens_height": 40,
+      "lens_width": 48,
+      "temple_length": 130,
+      "wall": 3.0
+    },
+    "family": "glasses",
+    "id": "dev-glasses-003",
+    "request": "Create a glasses frame with a Raspberry Pi board housing and a circular camera aperture. Required dimensions: wall=3 mm, clearance=0.4 mm, board_length=52 mm, board_width=38 mm, board_height=8 mm, camera_diameter=6 mm, lens_width=48 mm, lens_height=40 mm, bridge=18 mm, temple_length=130 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 12,
+      "board_length": 65,
+      "board_width": 30,
+      "bridge": 16,
+      "camera_diameter": 8,
+      "clearance": 0.4,
+      "lens_height": 40,
+      "lens_width": 48,
+      "temple_length": 140,
+      "wall": 2.0
+    },
+    "family": "glasses",
+    "id": "dev-glasses-004",
+    "request": "Create a glasses frame with a Raspberry Pi board housing and a circular camera aperture. Required dimensions: wall=2 mm, clearance=0.4 mm, board_length=65 mm, board_width=30 mm, board_height=12 mm, camera_diameter=8 mm, lens_width=48 mm, lens_height=40 mm, bridge=16 mm, temple_length=140 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 10,
+      "board_length": 65,
+      "board_width": 38,
+      "bridge": 16,
+      "camera_diameter": 6,
+      "clearance": 0.4,
+      "lens_height": 28,
+      "lens_width": 48,
+      "temple_length": 140,
+      "wall": 1.6
+    },
+    "family": "glasses",
+    "id": "dev-glasses-005",
+    "request": "Create a glasses frame with a Raspberry Pi board housing and a circular camera aperture. Required dimensions: wall=1.6 mm, clearance=0.4 mm, board_length=65 mm, board_width=38 mm, board_height=10 mm, camera_diameter=6 mm, lens_width=48 mm, lens_height=28 mm, bridge=16 mm, temple_length=140 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 12,
+      "board_length": 85,
+      "board_width": 23,
+      "camera_diameter": 6,
+      "clearance": 0.8,
+      "lid_thickness": 2,
+      "screw_diameter": 2.5,
+      "wall": 1.6
+    },
+    "family": "enclosure",
+    "id": "dev-enclosure-000",
+    "request": "Create a Raspberry Pi board enclosure with a circular camera aperture, a lid and screw mounting holes. Required dimensions: wall=1.6 mm, clearance=0.8 mm, board_length=85 mm, board_width=23 mm, board_height=12 mm, camera_diameter=6 mm, lid_thickness=2 mm, screw_diameter=2.5 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 6,
+      "board_length": 65,
+      "board_width": 45,
+      "camera_diameter": 6,
+      "clearance": 0.4,
+      "lid_thickness": 2.5,
+      "screw_diameter": 2.5,
+      "wall": 3.0
+    },
+    "family": "enclosure",
+    "id": "dev-enclosure-001",
+    "request": "Create a Raspberry Pi board enclosure with a circular camera aperture, a lid and screw mounting holes. Required dimensions: wall=3 mm, clearance=0.4 mm, board_length=65 mm, board_width=45 mm, board_height=6 mm, camera_diameter=6 mm, lid_thickness=2.5 mm, screw_diameter=2.5 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 8,
+      "board_length": 65,
+      "board_width": 45,
+      "camera_diameter": 12,
+      "clearance": 0.8,
+      "lid_thickness": 2,
+      "screw_diameter": 3,
+      "wall": 2.0
+    },
+    "family": "enclosure",
+    "id": "dev-enclosure-002",
+    "request": "Create a Raspberry Pi board enclosure with a circular camera aperture, a lid and screw mounting holes. Required dimensions: wall=2 mm, clearance=0.8 mm, board_length=65 mm, board_width=45 mm, board_height=8 mm, camera_diameter=12 mm, lid_thickness=2 mm, screw_diameter=3 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 10,
+      "board_length": 65,
+      "board_width": 45,
+      "camera_diameter": 8,
+      "clearance": 1.0,
+      "lid_thickness": 2.5,
+      "screw_diameter": 2.5,
+      "wall": 2.0
+    },
+    "family": "enclosure",
+    "id": "dev-enclosure-003",
+    "request": "Create a Raspberry Pi board enclosure with a circular camera aperture, a lid and screw mounting holes. Required dimensions: wall=2 mm, clearance=1 mm, board_length=65 mm, board_width=45 mm, board_height=10 mm, camera_diameter=8 mm, lid_thickness=2.5 mm, screw_diameter=2.5 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 8,
+      "board_length": 75,
+      "board_width": 45,
+      "camera_diameter": 12,
+      "clearance": 0.6,
+      "lid_thickness": 1.5,
+      "screw_diameter": 3,
+      "wall": 1.6
+    },
+    "family": "enclosure",
+    "id": "dev-enclosure-004",
+    "request": "Create a Raspberry Pi board enclosure with a circular camera aperture, a lid and screw mounting holes. Required dimensions: wall=1.6 mm, clearance=0.6 mm, board_length=75 mm, board_width=45 mm, board_height=8 mm, camera_diameter=12 mm, lid_thickness=1.5 mm, screw_diameter=3 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "board_height": 10,
+      "board_length": 85,
+      "board_width": 23,
+      "camera_diameter": 10,
+      "clearance": 0.8,
+      "lid_thickness": 2.5,
+      "screw_diameter": 3,
+      "wall": 1.6
+    },
+    "family": "enclosure",
+    "id": "dev-enclosure-005",
+    "request": "Create a Raspberry Pi board enclosure with a circular camera aperture, a lid and screw mounting holes. Required dimensions: wall=1.6 mm, clearance=0.8 mm, board_length=85 mm, board_width=23 mm, board_height=10 mm, camera_diameter=10 mm, lid_thickness=2.5 mm, screw_diameter=3 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 1.0,
+      "depth": 25,
+      "height": 40,
+      "hole_diameter": 7,
+      "wall": 2.4,
+      "width": 55
+    },
+    "family": "bracket",
+    "id": "dev-bracket-000",
+    "request": "Create a right-angle mounting bracket. Required dimensions: wall=2.4 mm, clearance=1 mm, width=55 mm, height=40 mm, depth=25 mm, hole_diameter=7 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 0.8,
+      "depth": 30,
+      "height": 30,
+      "hole_diameter": 5,
+      "wall": 2.0,
+      "width": 55
+    },
+    "family": "bracket",
+    "id": "dev-bracket-001",
+    "request": "Create a right-angle mounting bracket. Required dimensions: wall=2 mm, clearance=0.8 mm, width=55 mm, height=30 mm, depth=30 mm, hole_diameter=5 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 0.4,
+      "depth": 45,
+      "height": 40,
+      "hole_diameter": 3,
+      "wall": 3.0,
+      "width": 40
+    },
+    "family": "bracket",
+    "id": "dev-bracket-002",
+    "request": "Create a right-angle mounting bracket. Required dimensions: wall=3 mm, clearance=0.4 mm, width=40 mm, height=40 mm, depth=45 mm, hole_diameter=3 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 1.0,
+      "depth": 30,
+      "height": 60,
+      "hole_diameter": 3,
+      "wall": 2.4,
+      "width": 40
+    },
+    "family": "bracket",
+    "id": "dev-bracket-003",
+    "request": "Create a right-angle mounting bracket. Required dimensions: wall=2.4 mm, clearance=1 mm, width=40 mm, height=60 mm, depth=30 mm, hole_diameter=3 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 0.6,
+      "depth": 30,
+      "height": 30,
+      "hole_diameter": 5,
+      "wall": 1.6,
+      "width": 30
+    },
+    "family": "bracket",
+    "id": "dev-bracket-004",
+    "request": "Create a right-angle mounting bracket. Required dimensions: wall=1.6 mm, clearance=0.6 mm, width=30 mm, height=30 mm, depth=30 mm, hole_diameter=5 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 1.0,
+      "depth": 25,
+      "height": 60,
+      "hole_diameter": 5,
+      "wall": 2.0,
+      "width": 40
+    },
+    "family": "bracket",
+    "id": "dev-bracket-005",
+    "request": "Create a right-angle mounting bracket. Required dimensions: wall=2 mm, clearance=1 mm, width=40 mm, height=60 mm, depth=25 mm, hole_diameter=5 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 0.8,
+      "gap": 12,
+      "height": 35,
+      "wall": 1.6,
+      "width": 15
+    },
+    "family": "clip",
+    "id": "dev-clip-000",
+    "request": "Create a retaining clip. Required dimensions: wall=1.6 mm, clearance=0.8 mm, width=15 mm, height=35 mm, gap=12 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 0.4,
+      "gap": 8,
+      "height": 20,
+      "wall": 2.0,
+      "width": 20
+    },
+    "family": "clip",
+    "id": "dev-clip-001",
+    "request": "Create a retaining clip. Required dimensions: wall=2 mm, clearance=0.4 mm, width=20 mm, height=20 mm, gap=8 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 0.8,
+      "gap": 12,
+      "height": 35,
+      "wall": 2.4,
+      "width": 15
+    },
+    "family": "clip",
+    "id": "dev-clip-002",
+    "request": "Create a retaining clip. Required dimensions: wall=2.4 mm, clearance=0.8 mm, width=15 mm, height=35 mm, gap=12 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 1.0,
+      "gap": 8,
+      "height": 20,
+      "wall": 2.4,
+      "width": 15
+    },
+    "family": "clip",
+    "id": "dev-clip-003",
+    "request": "Create a retaining clip. Required dimensions: wall=2.4 mm, clearance=1 mm, width=15 mm, height=20 mm, gap=8 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 0.4,
+      "gap": 8,
+      "height": 35,
+      "wall": 3.0,
+      "width": 15
+    },
+    "family": "clip",
+    "id": "dev-clip-004",
+    "request": "Create a retaining clip. Required dimensions: wall=3 mm, clearance=0.4 mm, width=15 mm, height=35 mm, gap=8 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  },
+  {
+    "expected": {
+      "clearance": 0.4,
+      "gap": 8,
+      "height": 35,
+      "wall": 1.6,
+      "width": 20
+    },
+    "family": "clip",
+    "id": "dev-clip-005",
+    "request": "Create a retaining clip. Required dimensions: wall=1.6 mm, clearance=0.4 mm, width=20 mm, height=35 mm, gap=8 mm. Return editable source and STEP and STL exports. Preserve all requested dimensions and provide valid solid geometry.",
+    "requires": [
+      "valid_geometry",
+      "constraint_fidelity",
+      "editable_source",
+      "step_export",
+      "stl_export"
+    ]
+  }
+]

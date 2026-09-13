@@ -1,0 +1,9 @@
+# Installed workspace storage
+
+The original backend and MCP service derived their output root using `Path(__file__).parents[2]`. That assumes the repository's `src/cadforge` layout. A real wheel installation reproduced an artifact location based on the install directory's parent instead of the user's workspace data. Installed or read-only system environments could therefore write somewhere unexpected or fail.
+
+`runtime_paths.artifact_directory()` now provides a shared writable destination. Set `CADFORGE_ARTIFACTS_DIR` to a nonempty absolute path for an explicit location. Repository runs preserve their existing `artifacts` directory. Installed runs default to `~/.local/share/cadforge/artifacts`. The backend's sessions live under its `studio` subdirectory, while MCP production/robotics outputs use the same artifact base. Existing stores are not moved or deleted; configure the old location explicitly if retaining data from a previous installed setup.
+
+A built wheel was installed into an isolated target and imported from `/tmp`, with module paths confirming that the installed wheel supplied the implementation. The smoke check created a workspace, executed a deterministic edit, committed it through HTTP, exported STL, saved a project, and reopened that project through HTTP with byte-identical STL. The CLI help and default installed data location were checked separately. No model calls were used. Evidence is in `artifacts/package-audit/`; reproduction scripts are `check_installed_workspace.py` and `check_planner_dependency.py`.
+
+This checks the installed backend with dependencies from the existing validated environment; it is not a clean dependency installation or a standalone frontend installer. The editor UI is now bundled by the dedicated studio wheel build; see `BUNDLED_STUDIO.md`. Repository benchmark assets remain separate. Production geometry and physical qualification are not established by this smoke test.

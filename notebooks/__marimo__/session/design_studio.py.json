@@ -1,0 +1,74 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.24.2",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "e4193aca816a543590abf15300926b7d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "fe3cdfb2f05634f0488699b541097bc9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"cadforge-design-studio\">CADForge Design Studio</h1>\n<span class=\"paragraph\">Describe glasses, an enclosure, a bracket, or a clip. Edit the dimensions,\nthen select <strong>Build design</strong> to generate an editable CAD model and measured\ngeometry checks. Every dimension is in millimeters.</span>\n<span class=\"paragraph\">The four sliders override those dimensions in your request. Other dimensions\ncan be written as <code>board_width=30 mm</code> or <code>camera_diameter=8 mm</code>.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "9eb252ec9b2d3728eeb114cfdd179d3d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='vblA-17' random-id='20403feb-1e66-16cd-75c3-080032c314f2'><marimo-form data-initial-value='null' data-label='null' data-element-id='&quot;vblA-16&quot;' data-loading='false' data-bordered='true' data-submit-button-label='&quot;Build design&quot;' data-submit-button-disabled='false' data-clear-on-submit='false' data-show-clear-button='false' data-clear-button-label='&quot;Clear&quot;' data-should-validate='false'><marimo-ui-element object-id='vblA-16' random-id='394df307-4e7f-fb8a-0c2d-8b290179bf81'><marimo-dict data-initial-value='{&quot;request&quot;:&quot;Glasses housing a camera and Raspberry Pi Zero 2 W, camera_diameter=8 mm&quot;,&quot;wall&quot;:2.0,&quot;clearance&quot;:0.6,&quot;lens_width&quot;:48.0,&quot;lens_height&quot;:34.0}' data-label='null' data-element-ids='{&quot;vblA-11&quot;:&quot;request&quot;,&quot;vblA-12&quot;:&quot;wall&quot;,&quot;vblA-13&quot;:&quot;clearance&quot;,&quot;vblA-14&quot;:&quot;lens_width&quot;,&quot;vblA-15&quot;:&quot;lens_height&quot;}'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong>Your design</strong></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='vblA-11' random-id='57b75422-8985-6461-9a70-2c857f4ccd20'><marimo-text-area data-initial-value='&quot;Glasses housing a camera and Raspberry Pi Zero 2 W, camera_diameter=8 mm&quot;' data-label='null' data-placeholder='&quot;&quot;' data-max-length='3000' data-disabled='false' data-debounce='true' data-full-width='true' data-rows='3'></marimo-text-area></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='vblA-12' random-id='e04f861c-8c3a-b4b9-93ae-47f17be64798'><marimo-slider data-initial-value='2.0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eWall&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='0.5' data-stop='6.0' data-step='0.1' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='true' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='vblA-13' random-id='47bcef7c-1b51-4f74-51d3-d82ef0be8fd9'><marimo-slider data-initial-value='0.6' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eClearance&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='0.1' data-stop='3.0' data-step='0.1' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='true' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='vblA-14' random-id='47fa5061-50d5-cc3d-a167-9e61786a34d5'><marimo-slider data-initial-value='48.0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eLens width&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='25.0' data-stop='75.0' data-step='1.0' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='true' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='vblA-15' random-id='703e4686-b6d0-2db8-9721-ca305eedeba8'><marimo-slider data-initial-value='34.0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eLens height&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='20.0' data-stop='60.0' data-step='1.0' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='true' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></span></span></marimo-dict></marimo-ui-element></marimo-form></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "3e3d166c5e7dc8caae5080891377dd16",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Submit the form to create your first design.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "f2ea20a8c5259e5baea66db334565015",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "ancestor-stopped",
+          "evalue": "This cell wasn't run because an ancestor was stopped with `mo.stop`: ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    }
+  ]
+}

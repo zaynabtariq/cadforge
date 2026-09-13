@@ -1,0 +1,15 @@
+{
+  "family": "glasses",
+  "name": "PiZero2-Camera3-reference",
+  "parameters": {
+    "lens_width": 52,
+    "lens_height": 42.4,
+    "bridge": 18,
+    "temple_length": 145,
+    "wall": 2,
+    "clearance": 0.5,
+    "lid_thickness": 2,
+    "bore_diameter": 2.8,
+    "boss_outer_diameter": 5.8
+  }
+}

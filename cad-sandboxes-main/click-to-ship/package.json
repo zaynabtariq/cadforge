@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "occt-import-js": "0.0.23",
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
